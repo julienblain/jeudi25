@@ -5,13 +5,20 @@
  */
 package com.mycompany.jeudi25.personne;
 
-public class Personne {
+public abstract class Personne {
+    
     static private int nombre =0;
     final private int MAJEUR = 18;
     public String nom;
     protected int age;
     private String tel;
-
+    private String prenom;
+    
+    //doit etre redefini dans la classe enfant
+    abstract public void Appeler();
+        
+    
+    
     public String getTel() {
         return tel;
     }
@@ -61,8 +68,6 @@ public class Personne {
         return age >= MAJEUR;
     }
     
-    private String prenom;
-
     public String getPrenom() {
         return prenom;
     }
@@ -95,7 +100,6 @@ public class Personne {
         }
         table = new int[10];
         System.out.println(table.length);
-        return;
     }
     
     public void AjouteFormation(String Sujet, int nbJour) {

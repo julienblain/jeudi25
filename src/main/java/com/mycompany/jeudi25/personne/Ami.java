@@ -17,6 +17,7 @@ public class Ami extends Personne {
     public String prenom;
     public ArrayList<String> hobbies;
     
+    
     public Ami() throws Exception{
         super("ami inconnu",0);
     }
@@ -33,4 +34,11 @@ public class Ami extends Personne {
     public void setAge(int age) {
         this.age = age;
     }
+
+    @Override
+    public void Appeler() {
+        System.out.println("Methode appeler d'ami");
+    }
+    
+    
 }
